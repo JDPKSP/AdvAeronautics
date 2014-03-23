@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 522bbe2dcb12f7743a1649f822484685
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera
+    100004: Lamp
+    100006: body
+    100008: Light0
+    100010: Light1
+    100012: TailFin
+    100014: boom
+    100016: dome0
+    100018: dish0
+    100020: dome1
+    100022: dish1
+    100024: antenna0
+    100026: antenna1
+    100028: RTGfin
+    100030: leg
+    100032: wheel
+    100034: nossle
+    400000: //RootNode
+    400002: Camera
+    400004: Lamp
+    400006: body
+    400008: Light0
+    400010: Light1
+    400012: TailFin
+    400014: boom
+    400016: dome0
+    400018: dish0
+    400020: dome1
+    400022: dish1
+    400024: antenna0
+    400026: antenna1
+    400028: RTGfin
+    400030: leg
+    400032: wheel
+    400034: nossle
+    2300000: body
+    2300002: Light0
+    2300004: Light1
+    2300006: TailFin
+    2300008: boom
+    2300010: dome0
+    2300012: dish0
+    2300014: dome1
+    2300016: dish1
+    2300018: antenna0
+    2300020: antenna1
+    2300022: RTGfin
+    2300024: leg
+    2300026: wheel
+    2300028: nossle
+    3300000: body
+    3300002: Light0
+    3300004: Light1
+    3300006: TailFin
+    3300008: boom
+    3300010: dome0
+    3300012: dish0
+    3300014: dome1
+    3300016: dish1
+    3300018: antenna0
+    3300020: antenna1
+    3300022: RTGfin
+    3300024: leg
+    3300026: wheel
+    3300028: nossle
+    4300000: nossle
+    4300002: wheel
+    4300004: leg
+    4300006: RTGfin
+    4300008: antenna1
+    4300010: antenna0
+    4300012: dish1
+    4300014: dome1
+    4300016: dish0
+    4300018: dome0
+    4300020: boom
+    4300022: TailFin
+    4300024: Light1
+    4300026: Light0
+    4300028: body
+    7400000: Default Take
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 42
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 
