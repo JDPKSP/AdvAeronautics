@@ -125,7 +125,7 @@ namespace AdvAeronautics {
             if (part.symmetryCounterparts.Count == 1) {
                 if (animState == 1 && RequestActPower(Mode0EnergyCost * 2)) {
                     SetMode0();
-                    (part.symmetryCounterparts[0].Modules["ModuleRTWingAnimated"] as ModuleWingAnimated).SetMode0();
+                    (part.symmetryCounterparts[0].Modules["ModuleWingAnimated"] as ModuleWingAnimated).SetMode0();
                 }
             }
             else {
@@ -139,7 +139,7 @@ namespace AdvAeronautics {
             if (part.symmetryCounterparts.Count == 1) {
                 if (animState == 0 && RequestActPower(Mode1EnergyCost * 2)) {
                     SetMode1();
-                    (part.symmetryCounterparts[0].Modules["ModuleRTWingAnimated"] as ModuleWingAnimated).SetMode1();
+                    (part.symmetryCounterparts[0].Modules["ModuleWingAnimated"] as ModuleWingAnimated).SetMode1();
                 }
             }
             else {
@@ -197,8 +197,8 @@ namespace AdvAeronautics {
         void OnDestroy() {
             if (HighLogic.LoadedSceneIsEditor && part.symmetryCounterparts.Count == 1) {
                 try {
-                    (part.symmetryCounterparts[0].Modules["ModuleRTWingAnimated"] as ModuleWingAnimated).mirrorState = 0;
-                    (part.symmetryCounterparts[0].Modules["ModuleRTWingAnimated"] as ModuleWingAnimated).mirror(false);
+                    (part.symmetryCounterparts[0].Modules["ModuleWingAnimated"] as ModuleWingAnimated).mirrorState = 0;
+                    (part.symmetryCounterparts[0].Modules["ModuleWingAnimated"] as ModuleWingAnimated).mirror(false);
                 }
                 catch { }
             }
@@ -211,7 +211,7 @@ namespace AdvAeronautics {
 
             if (state == StartState.Editor) {
                 if (mirrorState == 0 && part.symmetryCounterparts.Count == 1) {
-                    (part.symmetryCounterparts[0].Modules["ModuleRTWingAnimated"] as ModuleWingAnimated).mirrorState = 1;
+                    (part.symmetryCounterparts[0].Modules["ModuleWingAnimated"] as ModuleWingAnimated).mirrorState = 1;
                     mirrorState = 2;
                     mirror(true);
                 }

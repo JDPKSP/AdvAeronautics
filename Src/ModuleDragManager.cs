@@ -36,18 +36,10 @@ namespace AdvAeronautics {
             foreach (KeyValuePair<PartModule, DragValue> pair in ModifyingModules) {
                 Max += pair.Value.maximum_drag;
                 Min += pair.Value.minimum_drag;
-
-                MonoBehaviour.print(pair.Key.moduleName);
-                MonoBehaviour.print("MAX: " + pair.Value.maximum_drag);
-                MonoBehaviour.print("MIN: " + pair.Value.minimum_drag);
             }
 
             part.maximum_drag = Max < 0 ? 0 : Max;
             part.minimum_drag = Min < 0 ? 0 : Min;
-
-            print("PART");
-            print(part.maximum_drag);
-            print(part.minimum_drag);
         }
     }
 }
