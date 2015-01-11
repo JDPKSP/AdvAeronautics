@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace AdvAeronautics {
+
+    public class ModuleAAfixAnim : PartModule {
+        public override void OnStart(PartModule.StartState state) {
+            int i = 0;
+            foreach (AnimationState s in part.FindModelAnimators()[0])
+                s.layer = i++;
+        }
+    }
+
     public static class AAeroUtil {
 
         public static ConfigNode Data = new ConfigNode("GearData");
