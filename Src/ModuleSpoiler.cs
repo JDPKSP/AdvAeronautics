@@ -29,14 +29,19 @@ namespace AdvAeronautics {
 
         ModuleLandingGear.GearStates spoilerState = ModuleLandingGear.GearStates.UNDEFINED;
 
-        private ModuleDragManager DragManager;
+        private DragManager DragManager;
 
         protected Animation anim;
         protected AnimationState animState;
 
         public override void OnStart(PartModule.StartState state) {
 
-            DragManager = part.Modules["ModuleDragManager"] as ModuleDragManager;
+            DragManager = part.gameObject.GetComponent<DragManager>();
+
+            if (DragManager == null) {
+                DragManager = part.gameObject.AddComponent<DragManager>();
+                DragManager.SetPart(part);
+            }
 
             anim = part.FindModelAnimators(AnimationName)[0];
             animState = anim[AnimationName];

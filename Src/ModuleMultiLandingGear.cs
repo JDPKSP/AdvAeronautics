@@ -23,7 +23,7 @@ namespace AdvAeronautics {
         [KSPField]
         private GearHandler gearHandler = new GearHandler();
 
-        private ModuleDragManager DragManager;
+        private DragManager DragManager;
 
         [KSPField(guiName = "Gear", isPersistant = true, guiActiveEditor = true, guiActive = true)]
         [UI_Toggle(disabledText = "Retracted", enabledText = "Deployed")]
@@ -87,8 +87,14 @@ namespace AdvAeronautics {
         }
 
         public override void OnStart(PartModule.StartState state) {
-            
-            DragManager = part.Modules["ModuleDragManager"] as ModuleDragManager;
+
+            DragManager = part.gameObject.GetComponent<DragManager>();
+
+            if (DragManager == null) {
+                DragManager = part.gameObject.AddComponent<DragManager>();
+                DragManager.SetPart(part);
+            }
+
             gearHandler.Start(ID,part);
             anim = part.FindModelAnimators(AnimationName)[0];
             animState = anim[AnimationName];

@@ -13,21 +13,21 @@ namespace AdvAeronautics {
         }
     }    
 
-    public class ModuleDragManager : PartModule {
+    public class DragManager : MonoBehaviour {
 
         private float maximum_drag, minimum_drag;
 
         private Dictionary<PartModule, DragValue> ModifyingModules = new Dictionary<PartModule, DragValue>();
 
-        private bool Active = false;
+        private Part part;
+
+        public void SetPart(Part p){
+            part = p;
+            maximum_drag = part.maximum_drag;
+            minimum_drag = part.minimum_drag;
+        }
 
         public void SetDrag(PartModule pm, DragValue DMaxMin) {
-            if (!Active) {
-                maximum_drag = part.maximum_drag;
-                minimum_drag = part.minimum_drag;
-                Active = true;
-            }
-
             ModifyingModules[pm] = DMaxMin;
 
             float Max = maximum_drag;
